@@ -72,7 +72,7 @@
   ];
 
   const SCORES=[0,100,300,500,800];
-  const SPEEDS=[800,700,600,500,400,300,220,160,110,70];
+  const SPEEDS=[450,370,300,240,190,145,105,72,48,30];
 
   let board,piece,next,score,lines,level,dropTimer,lastTime,raf,running,keys;
 
@@ -124,7 +124,7 @@
     if(!cleared)return;
     lines+=cleared;
     score+=SCORES[cleared]*(level+1);
-    level=Math.min(9,Math.floor(lines/10));
+    level=Math.min(9,Math.floor(lines/7));
     scEl.textContent=score;
     lnEl.textContent=lines;
     lvEl.textContent=level+1;
